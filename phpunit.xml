@@ -7,8 +7,14 @@
          failOnWarning="true"
          cacheDirectory=".phpunit.cache">
     <testsuites>
-        <testsuite name="Test Suite">
-            <directory>tests</directory>
+        <testsuite name="Package">
+            <directory>tests/Package</directory>
+        </testsuite>
+        <testsuite name="Request">
+            <directory>tests/Request</directory>
+        </testsuite>
+        <testsuite name="Resource">
+            <directory>tests/Resource</directory>
         </testsuite>
     </testsuites>
     <source>
@@ -16,4 +22,7 @@
             <directory>src</directory>
         </include>
     </source>
+    <php>
+        <env name="APP_TIMEZONE" value="UTC"/>
+    </php>
 </phpunit>
