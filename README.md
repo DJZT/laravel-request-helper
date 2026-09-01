@@ -35,7 +35,9 @@ The service provider is auto-discovered. Publishing the config is optional:
 php artisan vendor:publish --tag=request-helper-config
 ```
 
-Requires PHP 8.2+ and Laravel 11, 12 or 13.
+Requires PHP 8.2+ and Laravel 12 or 13. Laravel 11 is not supported: every 11.x
+release is flagged by Packagist security advisories, so Composer refuses to install
+it under its default advisory policy.
 
 While the package is on 0.x the public API may still change; pin a minor version
 (`^0.1`) if you need stability.

@@ -13,6 +13,7 @@ Initial release.
 - `TypedInput` reader usable on any request, array or `Arrayable`.
 - `typed()` macro on `Illuminate\Http\Request`.
 - Failures render as regular 422 validation errors.
+- Supports PHP 8.2+ on Laravel 12 and 13.
 
 While the package is on 0.x the public API may still change; minor releases can
 carry breaking changes until 1.0.0.
