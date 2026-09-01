@@ -37,6 +37,9 @@ php artisan vendor:publish --tag=request-helper-config
 
 Requires PHP 8.2+ and Laravel 11, 12 or 13.
 
+While the package is on 0.x the public API may still change; pin a minor version
+(`^0.1`) if you need stability.
+
 ## Usage
 
 ### Extend `BaseRequest`
