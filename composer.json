@@ -1,0 +1,53 @@
+{
+    "name": "djzt/laravel-request-helper",
+    "description": "Typed request accessors for Laravel: nullable*, optional* and required* helpers with an explicit Optional marker for absent keys.",
+    "keywords": ["laravel", "request", "form-request", "dto", "optional", "nullable", "typed"],
+    "homepage": "https://github.com/DJZT/laravel-request-helper",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "DJZT",
+            "email": "djzt44@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/contracts": "^11.0|^12.0|^13.0",
+        "illuminate/http": "^11.0|^12.0|^13.0",
+        "illuminate/support": "^11.0|^12.0|^13.0",
+        "illuminate/validation": "^11.0|^12.0|^13.0",
+        "nesbot/carbon": "^2.72|^3.0"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.18",
+        "orchestra/testbench": "^9.0|^10.0|^11.0",
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "DJZT\\RequestHelper\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DJZT\\RequestHelper\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "lint": "vendor/bin/pint --test",
+        "format": "vendor/bin/pint"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DJZT\\RequestHelper\\RequestHelperServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
