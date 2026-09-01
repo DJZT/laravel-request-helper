@@ -42,6 +42,6 @@ final class RequestHelperServiceProvider extends ServiceProvider
 
     private function configPath(): string
     {
-        return dirname(__DIR__, 2).'/config/request-helper.php';
+        return __DIR__.'/../config/request-helper.php';
     }
 }

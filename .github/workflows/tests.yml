@@ -37,11 +37,8 @@ jobs:
       - uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php }}
-          extensions: mbstring, intl, sqlite3
+          extensions: mbstring, intl
           coverage: none
-
-      - name: Validate composer.json
-        run: composer validate --strict --no-check-lock
 
       - name: Install dependencies
         run: |

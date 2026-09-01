@@ -1,20 +1,8 @@
 {
-    "name": "djzt/laravel-helpers",
-    "description": "Laravel helpers in one package: typed request accessors with an explicit Optional marker, and formatting helpers for API resources — dates, money, enums, files, conditional attributes.",
-    "keywords": [
-        "laravel",
-        "helpers",
-        "request",
-        "form-request",
-        "resource",
-        "json-resource",
-        "dto",
-        "optional",
-        "nullable",
-        "typed",
-        "formatting"
-    ],
-    "homepage": "https://github.com/DJZT/laravel-helpers",
+    "name": "djzt/laravel-request-helper",
+    "description": "Typed request accessors for Laravel: nullable*, optional* and required* helpers with an explicit Optional marker for absent keys.",
+    "keywords": ["laravel", "request", "form-request", "dto", "optional", "nullable", "typed"],
+    "homepage": "https://github.com/DJZT/laravel-request-helper",
     "license": "MIT",
     "authors": [
         {
@@ -33,20 +21,16 @@
     "require-dev": {
         "laravel/pint": "^1.18",
         "orchestra/testbench": "^10.0|^11.0",
-        "phpunit/phpunit": "^11.0|^12.0"
+        "phpunit/phpunit": "^10.5|^11.0|^12.0"
     },
     "autoload": {
         "psr-4": {
-            "DJZT\\Helpers\\": "src/",
-            "DJZT\\RequestHelper\\": "src/Request/",
-            "Djzt\\ResourceHelper\\": "src/Resource/"
+            "DJZT\\RequestHelper\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DJZT\\Helpers\\Tests\\": "tests/Package/",
-            "DJZT\\RequestHelper\\Tests\\": "tests/Request/",
-            "Djzt\\ResourceHelper\\Tests\\": "tests/Resource/"
+            "DJZT\\RequestHelper\\Tests\\": "tests/"
         }
     },
     "scripts": {
@@ -57,11 +41,8 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DJZT\\Helpers\\HelpersServiceProvider"
-            ],
-            "aliases": {
-                "ResourceHelper": "Djzt\\ResourceHelper\\Facades\\ResourceHelper"
-            }
+                "DJZT\\RequestHelper\\RequestHelperServiceProvider"
+            ]
         }
     },
     "config": {

@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DJZT\RequestHelper\Tests;
 
-use DJZT\Helpers\HelpersServiceProvider;
+use DJZT\RequestHelper\RequestHelperServiceProvider;
 use DJZT\RequestHelper\Support\TypedInput;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -15,7 +15,7 @@ abstract class TestCase extends Orchestra
      */
     protected function getPackageProviders($app): array
     {
-        return [HelpersServiceProvider::class];
+        return [RequestHelperServiceProvider::class];
     }
 
     /**
